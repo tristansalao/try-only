@@ -6,7 +6,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+<<<<<<< HEAD
     "start": "node index.js && npm run dev",
+=======
+    "start": "npm run dev  && node index.js ",
+>>>>>>> 68760eb902b2f636ac9d8f918d91584ad6383fe7
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
