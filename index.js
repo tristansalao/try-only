@@ -17,10 +17,11 @@ express()
   .use(staticFileMiddleware)
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.static(path.join(__dirname, 'src')))
-  .use(express.static(path.join(__dirname, '/dist/')))
-  .use(serveStatic(path.join(__dirname, 'dist')))
+  
   .set('views', path.join(__dirname, 'views'))
   .get('/', (req, res) => res.send('hello'))
+
+  .use(express.static(path.join(__dirname, '/dist/')))
+  .use(serveStatic(path.join(__dirname, 'dist')))
   .get('/test', (req, res) =>  res.render(path.join(__dirname + '/dist/index.html')))
-  
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
