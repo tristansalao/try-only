@@ -13,7 +13,7 @@ express()
     disableDotRule: true,
     verbose: true
   }))
-  .use(staticFileMiddleware)
+  //.use(staticFileMiddleware)
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.static(path.join(__dirname, 'src')))
   .use(express.static(path.join(__dirname, '/dist/')))
