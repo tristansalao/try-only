@@ -19,7 +19,7 @@ express()
 
 
   .use(express.static(path.join(__dirname, 'public')))
-  .use(express.static(path.join(__dirname, 'src')))
+ // .use(express.static(path.join(__dirname, 'src')))
   //.use(express.static(path.join(__dirname, '/dist/')))
  // .use(serveStatic(path.join(__dirname, 'dist')))
   .set('views', path.join(__dirname, 'views'))
