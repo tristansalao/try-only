@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 5000
 const history = require('connect-history-api-fallback')
 
 
-const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))
+//const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))
 
 
 express()
