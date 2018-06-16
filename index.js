@@ -20,8 +20,6 @@ express()
   //.use(express.static(path.join(__dirname, '/dist/')))
   .use(serveStatic(path.join(__dirname, 'dist')))
   .set('views', path.join(__dirname, 'views'))
-  .get('/', (req, res) => res.send('hello'))
-
-
+  .get('/test2', (req, res) => res.send('hello'))
   .get('/test', (req, res) =>  res.render(path.join(__dirname + '/dist/index.html')))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
