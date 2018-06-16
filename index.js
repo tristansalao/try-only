@@ -8,11 +8,11 @@ const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))
 
 
 express()
-  .use(staticFileMiddleware)
-  .use(history({
-    disableDotRule: true,
-    verbose: true
-  }))
+  //.use(staticFileMiddleware)
+  //.use(history({
+  //  disableDotRule: true,
+  //  verbose: true
+  //}))
   //.use(staticFileMiddleware)
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.static(path.join(__dirname, 'src')))
