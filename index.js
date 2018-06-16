@@ -4,16 +4,16 @@ const PORT = process.env.PORT || 5000
 const history = require('connect-history-api-fallback')
 
 
-//const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))
+const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))
 
 
 express()
-  //.use(staticFileMiddleware)
- // .use(history({
- //   disableDotRule: true,
- //   verbose: true
- // }))
- // .use(staticFileMiddleware)
+  .use(staticFileMiddleware)
+  .use(history({
+    disableDotRule: true,
+    verbose: true
+  }))
+  .use(staticFileMiddleware)
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.static(path.join(__dirname, 'src')))
   .use(express.static(path.join(__dirname, '/dist/')))
