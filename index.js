@@ -21,7 +21,7 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.static(path.join(__dirname, 'src')))
   //.use(express.static(path.join(__dirname, '/dist/')))
-  .use(serveStatic(path.join(__dirname, 'dist')))
+ // .use(serveStatic(path.join(__dirname, 'dist')))
   .set('views', path.join(__dirname, 'views'))
 
  // .get('/test', (req, res) =>  res.render(path.join(__dirname + '/dist/index.html'))) // not working after adding vue
