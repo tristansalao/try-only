@@ -24,5 +24,5 @@ express()
   .use(serveStatic(path.join(__dirname, 'dist')))
   .set('views', path.join(__dirname, 'views'))
 
- // .get('/test', (req, res) =>  res.render(path.join(__dirname + '/dist/index.html')))
+ // .get('/test', (req, res) =>  res.render(path.join(__dirname + '/dist/index.html'))) // not working after adding vue
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
