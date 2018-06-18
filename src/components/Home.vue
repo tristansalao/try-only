@@ -7,12 +7,20 @@
 
     >
       <template slot="items" slot-scope="props">
-        <td>{{ props.item.name }}</td>
-        <td class="text-xs-left">{{ props.item.calories }}</td>
-        <td class="text-xs-left">{{ props.item.fat }}</td>
-        <td class="text-xs-left">{{ props.item.carbs }}</td>
-        <td class="text-xs-left">{{ props.item.protein }}</td>
-        <td class="text-xs-left">{{ props.item.iron }}</td>
+        <td>{{ props.item.no }}</td>
+        <td class="text-xs-left">{{ props.item.hoid }}</td>
+        <td class="text-xs-left">{{ props.item.commission }}</td>
+        <td class="text-xs-left">{{ props.item.deposit }}</td>
+        <td class="text-xs-left">{{ props.item.deptransfer }}</td>
+        <td class="text-xs-left">{{ props.item.withdraw }}</td>
+        <td class="text-xs-left">{{ props.item.withtransfer }}</td>
+        <td class="text-xs-left">{{ props.item.betamount }}</td>
+        <td class="text-xs-left">{{ props.item.rake }}</td>
+        <td class="text-xs-left">{{ props.item.userholding }}</td>
+        <td class="text-xs-left">{{ props.item.offprofit }}</td>
+        <td class="text-xs-left">{{ props.item.offmoney }}</td>
+        <td class="text-xs-left">{{ props.item.moneylowrank }}</td>
+        <td class="text-xs-left">{{ props.item.lowrank }}</td>
       </template>
     </v-data-table>
 </template>
@@ -60,6 +68,23 @@ export default {
           moneylowrank: '1%',
           lowrank: '1%',
         },
+        {
+          value: false,
+          no: 'Frozen Yogurt',
+          hoid: 159,
+          commission: 6.0,
+          deposit: 24,
+          deptransfer: 4.0,
+          withdraw: '1%',
+          withtransfer: '1%',
+          betamount: '1%',
+          rake: '1%',
+          userholding: '1%',
+          offprofit: '1%',
+          offmoney: '1%',
+          moneylowrank: '1%',
+          lowrank: '1%',
+        }
       ]    	
     }
   }
