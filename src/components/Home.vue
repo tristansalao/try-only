@@ -26,11 +26,10 @@
 </template>
 
 <script>
-import json from './src/components/home.json'    
+  
 export default {
   data () {
     return {
-        myJson: json,
     	headers: [
         {
           text: 'No.',
@@ -51,7 +50,77 @@ export default {
         { text: 'Head Office Money', value: 'offmoney' },
         { text: 'Money of Low Rank', value: 'moneylowrank' },
         { text: 'Low Rank', value: 'lowrank' },
-      ]
+      ],
+        data:[
+            {
+          value: false,
+          no: 'Frozen Yogurt',
+          hoid: 159,
+          commission: 6.0,
+          deposit: 24,
+          deptransfer: 4.0,
+          withdraw: '1%',
+          withtransfer: '1%',
+          betamount: '1%',
+          rake: '1%',
+          userholding: '1%',
+          offprofit: '1%',
+          offmoney: '1%',
+          moneylowrank: '1%',
+          lowrank: '1%',
+        }, 
+        {
+          value: false,
+          no: 'Frozen Yogurt',
+          hoid: 159,
+          commission: 6.0,
+          deposit: 24,
+          deptransfer: 4.0,
+          withdraw: '1%',
+          withtransfer: '1%',
+          betamount: '1%',
+          rake: '1%',
+          userholding: '1%',
+          offprofit: '1%',
+          offmoney: '1%',
+          moneylowrank: '1%',
+          lowrank: '1%',
+        },
+        {
+          value: false,
+          no: 'Frozen Yogurt',
+          hoid: 159,
+          commission: 6.0,
+          deposit: 24,
+          deptransfer: 4.0,
+          withdraw: '1%',
+          withtransfer: '1%',
+          betamount: '1%',
+          rake: '1%',
+          userholding: '1%',
+          offprofit: '1%',
+          offmoney: '1%',
+          moneylowrank: '1%',
+          lowrank: '1%',
+        },
+        {
+          value: false,
+          no: 'Frozen Yogurt',
+          hoid: 159,
+          commission: 6.0,
+          deposit: 24,
+          deptransfer: 4.0,
+          withdraw: '1%',
+          withtransfer: '1%',
+          betamount: '1%',
+          rake: '1%',
+          userholding: '1%',
+          offprofit: '1%',
+          offmoney: '1%',
+          moneylowrank: '1%',
+          lowrank: '1%',
+        }
+        ]
     }
   }
 }
