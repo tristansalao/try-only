@@ -30,6 +30,7 @@ import json from './src/components/home.json'
 export default {
   data () {
     return {
+        myJson: json,
     	headers: [
         {
           text: 'No.',
@@ -50,8 +51,7 @@ export default {
         { text: 'Head Office Money', value: 'offmoney' },
         { text: 'Money of Low Rank', value: 'moneylowrank' },
         { text: 'Low Rank', value: 'lowrank' },
-      ],
-        myJson: json
+      ]
     }
   }
 }
