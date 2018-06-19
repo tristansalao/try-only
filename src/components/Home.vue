@@ -50,7 +50,7 @@ export default {
         { text: 'Head Office Money', value: 'offmoney' },
         { text: 'Money of Low Rank', value: 'moneylowrank' },
         { text: 'Low Rank', value: 'lowrank' },
-      ]
+      ],
         myJson: json
     }
   }
