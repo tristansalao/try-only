@@ -1,4 +1,4 @@
-new Vue
+var home = new Vue
 (
     {
         el: '#home',
