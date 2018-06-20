@@ -31,6 +31,10 @@
 </pre>
 </template>
 
+
+<script src="src/components/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
 <script>
 export default {
   data () {
