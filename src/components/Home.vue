@@ -26,6 +26,9 @@
       </template>
     </v-data-table>
 </div>
+<pre>
+{{ $data }}
+</pre>
 </template>
 
 <script>
