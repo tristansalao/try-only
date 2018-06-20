@@ -1,4 +1,6 @@
 <template>
+<div id="home">
+    <v-btn v-on:click="loadApi" color="primary">Load Data</v-btn>
 	<v-data-table dark
       :headers="headers"
       :items="data"
@@ -23,10 +25,10 @@
         <td class="text-xs-left">{{ props.item.lowrank }}</td>
       </template>
     </v-data-table>
+</div>
 </template>
 
 <script>
-  
 export default {
   data () {
     return {
@@ -50,77 +52,7 @@ export default {
         { text: 'Head Office Money', value: 'offmoney' },
         { text: 'Money of Low Rank', value: 'moneylowrank' },
         { text: 'Low Rank', value: 'lowrank' },
-      ],
-        data:[
-            {
-          value: false,
-          no: 'Frozen Yogurt',
-          hoid: 159,
-          commission: 6.0,
-          deposit: 24,
-          deptransfer: 4.0,
-          withdraw: '1%',
-          withtransfer: '1%',
-          betamount: '1%',
-          rake: '1%',
-          userholding: '1%',
-          offprofit: '1%',
-          offmoney: '1%',
-          moneylowrank: '1%',
-          lowrank: '1%',
-        }, 
-        {
-          value: false,
-          no: 'Frozen Yogurt',
-          hoid: 159,
-          commission: 6.0,
-          deposit: 24,
-          deptransfer: 4.0,
-          withdraw: '1%',
-          withtransfer: '1%',
-          betamount: '1%',
-          rake: '1%',
-          userholding: '1%',
-          offprofit: '1%',
-          offmoney: '1%',
-          moneylowrank: '1%',
-          lowrank: '1%',
-        },
-        {
-          value: false,
-          no: 'Frozen Yogurt',
-          hoid: 159,
-          commission: 6.0,
-          deposit: 24,
-          deptransfer: 4.0,
-          withdraw: '1%',
-          withtransfer: '1%',
-          betamount: '1%',
-          rake: '1%',
-          userholding: '1%',
-          offprofit: '1%',
-          offmoney: '1%',
-          moneylowrank: '1%',
-          lowrank: '1%',
-        },
-        {
-          value: false,
-          no: 'Frozen Yogurt',
-          hoid: 159,
-          commission: 6.0,
-          deposit: 24,
-          deptransfer: 4.0,
-          withdraw: '1%',
-          withtransfer: '1%',
-          betamount: '1%',
-          rake: '1%',
-          userholding: '1%',
-          offprofit: '1%',
-          offmoney: '1%',
-          moneylowrank: '1%',
-          lowrank: '1%',
-        }
-        ]
+      ]
     }
   }
 }
