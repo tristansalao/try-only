@@ -2,10 +2,6 @@ new Vue
 (
     {
         el: '#home',
-        data:
-        {
-            
-        },
         methods:
         {
            loadApi: function()
