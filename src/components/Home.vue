@@ -1,51 +1,66 @@
-<template>
 <div id="home">
-    <v-btn v-on:click="loadApi" color="primary">Load Data</v-btn>
-	<v-data-table dark
-      :headers="headers"
-      :items="data"
-      hide-actions
-      class="elevation-1: pt-2"
-
-    >
-      <template slot="items" slot-scope="props">
-        <td>{{ props.item.no }}</td>
-        <td class="text-xs-left">{{ props.item.hoid }}</td>
-        <td class="text-xs-left">{{ props.item.commission }}</td>
-        <td class="text-xs-left">{{ props.item.deposit }}</td>
-        <td class="text-xs-left">{{ props.item.deptransfer }}</td>
-        <td class="text-xs-left">{{ props.item.withdraw }}</td>
-        <td class="text-xs-left">{{ props.item.withtransfer }}</td>
-        <td class="text-xs-left">{{ props.item.betamount }}</td>
-        <td class="text-xs-left">{{ props.item.rake }}</td>
-        <td class="text-xs-left">{{ props.item.userholding }}</td>
-        <td class="text-xs-left">{{ props.item.offprofit }}</td>
-        <td class="text-xs-left">{{ props.item.offmoney }}</td>
-        <td class="text-xs-left">{{ props.item.moneylowrank }}</td>
-        <td class="text-xs-left">{{ props.item.lowrank }}</td>
-      </template>
-    </v-data-table>
+    <v-app id="inspire">
+    <v-card dark>
+      <v-card-title>
+        
+        <v-spacer></v-spacer>
+        <v-text-field
+          append-icon="search"
+          label="Search"
+          single-line
+          hide-details
+          v-model="search"
+        ></v-text-field>
+      </v-card-title>
+      <v-data-table 
+        :headers="headers"
+        :items="items"
+        :search="search">
+        <template slot="items" slot-scope="props">
+          <td class="text-xs-right">{{ props.item.id }}</td>
+          <td class="text-xs-right">{{ props.item.title }}</td>
+        </template>
+        <v-alert slot="no-results" :value="true" color="error" icon="warning">
+          Your search for "{{ search }}" found no results.
+        </v-alert>
+      </v-data-table>
+    </v-card>
+  </v-app>
 </div>
-<pre>
-{{ $data }}
-</pre>
-</template>
+
 
 <script src="src/components/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 
 <script>
 export default {
+  el:'#home',
+  created: function(){
+      this.getData()
+  },
+  methods: {
+      getData: function(){
+                        var vm = this;
+                        $.ajax({
+                            url: 'https://jsonplaceholder.typicode.com/posts',
+                            method: 'GET'
+                        }).then(function (data) {
+                            vm.items = data;     
+                        });                             
+      }
+  },
   data () {
     return {
     	headers: [
+      search: '',
+      headers: [
         {
           text: 'No.',
           align: 'left',
           sortable: false,
           value: 'no'
         },
-        { text: 'HO ID', value: 'hoid' },
+        { text: 'HO ID', value: 'hoid', sortable: false },
         { text: 'Commission', value: 'commission' },
         { text: 'Deposit', value: 'deposit' },
         { text: 'Deposit(Transfer)', value: 'deptransfer' },
@@ -58,7 +73,8 @@ export default {
         { text: 'Head Office Money', value: 'offmoney' },
         { text: 'Money of Low Rank', value: 'moneylowrank' },
         { text: 'Low Rank', value: 'lowrank' },
-      ]
+      ],
+      items: []
     }
   }
 }
